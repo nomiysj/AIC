@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#">
+
+    <!-- Classes Definition -->
+    <rdf:Description rdf:about="#GeometricShape">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:label>GeometricShape</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#Triangle">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:subClassOf rdf:resource="#GeometricShape"/>
+        <rdfs:label>Triangle</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#Square">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:subClassOf rdf:resource="#GeometricShape"/>
+        <rdfs:label>Square</rdfs:label>
+    </rdf:Description>
+
+    <!-- Properties Definition -->
+    <rdf:Description rdf:about="#hasBase">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="#Triangle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label>hasBase</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#hasHeight">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="#Triangle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label>hasHeight</rdfs:label>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#hasArea">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <rdfs:domain rdf:resource="#GeometricShape"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label>hasArea</rdfs:label>
+    </rdf:Description>
+
+    <!-- Constraints (Domain and Range) -->
+    <rdf:Description rdf:about="#GeometricShape">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:label>GeometricShape</rdfs:label>
+    </rdf:Description>
+
+</rdf:RDF>
